@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ng-Mines</title>
+        <!--<link rel="stylesheet" href="libs/bootstrap.css">-->
+        <link rel="stylesheet" href="views/css/mainstyle.css">
+        <link rel="icon" href="views/imgs/favicon.ico" type="image/x-icon">
+        <meta charset="UTF-8">
+    </head>
+    <body ng-app="app">
+        
+        <div id="fundo">
+            <img src="views/imgs/chains.png" class="h-center-contain">
+            <img src="views/imgs/fundo4.png" class="vh-center-contain">
+
+            <div class="vh-center-contain borda">
+                <div class="borda2">
+                    <ui-view />
+                </div>
+            </div>
+        </div>
+
+        <script src="libs/angular.js"></script>
+        <script src="libs/angular-ui-router.min.js"></script>
+
+        <script src="app/app.js"></script>
+        <script src="app/ng-mines.js"></script>
+        <script src="app/controllers/jogoCtrl.js"></script>
+        <script src="app/directives/cronometro.js"></script>
+        <script src="app/directives/campo.js"></script>
+        <script src="app/services/campoService.js"></script>
+    </body>
+</html>

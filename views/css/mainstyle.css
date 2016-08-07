@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'AngryFont';
+    src: url('feast of flesh.TTF')
+}
+
+body {
+    background: url('../imgs/bg.svg') no-repeat center fixed;
+    background-size: cover;
+    background-clip: border-box;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    height: 100%;
+}
+
+#fundo {
+    height: 100vh;
+}
+
+.h-center-contain {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.vh-center-contain {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.borda {
+    width: 100vh;
+    height: 100vw;
+}
+
+.borda2 {
+    margin: 24% 12% 6% 12%;
+    width: 75%;
+    height: 67%;
+    overflow: hidden;
+}
+
+.button-menu {
+    display: block;
+    width: 80%;
+    height: 80px;
+    margin: 10%;
+    padding: 10px;
+    text-align: center;
+    font-size: 3em;
+    border-image: url('../imgs/botao3.png') 0 0 0 0 fill stretch;
+    cursor: pointer;
+    font-family: 'AngryFont';
+    color: white;
+    text-shadow: -2px -2px 0 #000,
+                 2px -2px 0 #000,
+                 -2px 2px 0 #000,
+                 2px 2px 0 #000;
+}
+
+#game-board {
+    width: 100%;
+    background-image: url('../imgs/fundojogo.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 4%;
+    height: 95%;
+}
+
+.toolbar {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.toolbar li {
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+}
+
+#flag {
+    position: absolute;
+    left: 6.3%;
+    height: 6%;
+    top: 52%;
+    width: 3.5%;
+}
+
+#pause {
+    position: absolute;
+    right: 6.7%;
+    height: 6%;
+    top: 52%;
+    width: 3.5%;
+}
+
+cronometro {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    font-size: 3vh;
+    font-family: serif;
+    font-weight: 600;
+    color: #dec38d;
+}
+
+.campo {
+    border: 1px solid black;
+    display: table;
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+}
+
+.terreno {
+    border: 1px solid black;
+    display: table-cell;
+    background-image: url('../imgs/skull.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 80%;
+    font-size: 7vh;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Courier New', Courier, monospace;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+
+#form {
+    font-family: sans-serif;
+    color: white;
+    padding: 8%;
+}
+
+#form input {
+    width: 100%;
+}
+
+#form button {
+    float: right;
+    display: block;
+    border: none;
+    background-color: transparent;
+    border-image: url('../imgs/botao3.png') 0 0 0 0 fill stretch;
+    cursor: pointer;
+    padding: 11px;
+    color: black;
+    font-weight: bold;
+    font-family: 'AngryFont';
+}
+
+#form button:hover {
+    text-shadow: 0 0 4px white;
+}

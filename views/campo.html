@@ -1,0 +1,9 @@
+<div class="campo">
+
+    <div style="display: table-row" ng-repeat="linha in campo.terrenos">
+        
+        <div ng-repeat="terreno in linha" ng-click="campo.revelar($parent.$index, $index)" ng-style="campo.formatar(terreno, campo.terrenos.length)" class="terreno">
+            {{ terreno.value }}
+        </div>
+    </div>
+</div>

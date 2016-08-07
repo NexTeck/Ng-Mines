@@ -1,0 +1,11 @@
+<cronometro ng-style="gameover ? { 'color': 'red' } : { 'color': '#dec38d' }"></cronometro>
+<div id="game-board">
+
+    <img src="views/imgs/flag.png" id="flag" ng-click="bandeira = !bandeira" ng-style="bandeira ? { 'filter': 'hue-rotate(90deg)' } : { 'filter': 'unset' }">
+
+    <img src="views/imgs/pause.png" id="pause" ng-click="cronometro.pausar()" ng-style="pausado ? { 'filter': 'hue-rotate(90deg)' } : { 'filter': 'unset' }">
+
+    <campo campo="terrenos" bandeira="bandeira" gameover="gameover" ng-show="!pausado"></campo>
+
+    <div class="button-menu" ng-click="cronometro.retomar()" ng-show="pausado">Retomar jogo</div>
+</div>

@@ -1,0 +1,19 @@
+<div id="form">
+    <ng-form name="form">
+        <p>
+            Qtd. de linhas:<br>
+            <input type="number" ng-model="linhas" min="1" max="15" value="8" required>
+        </p>
+        <p>
+            Qtd. de colunas:<br>
+            <input type="number" ng-model="colunas" min="1" max="15" value="" required>
+        </p>
+        <p>
+            Dificuldade: {{prob}}%<br>
+            <input type="range" min="1" max="99" ng-model="prob" value="30" required>
+        </p>
+        <p>
+            <button ng-show="form.$valid" ui-sref="jogo({linhas: linhas, colunas: colunas, prob: prob / 100})" style="font-family: sans-serif">Começar!</button>
+        </p>
+    </ng-form>
+</div>
