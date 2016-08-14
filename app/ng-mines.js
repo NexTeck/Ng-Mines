@@ -114,7 +114,7 @@ angular.module('app').constant('ngMines', {
             for (var i = 0; i < vm.terrenos.length; i++)
                 for (var j = 0; j < vm.terrenos[0].length; j++) {
                     var terreno = vm.terrenos[i][j];
-                    if (terreno.estado === 'F' && terreno.value != 9)
+                    if (terreno.estado != 'A' && terreno.value != 9)
                         return;
                 }
             
