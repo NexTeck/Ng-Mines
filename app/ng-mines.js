@@ -110,6 +110,17 @@ angular.module('app').constant('ngMines', {
             }
 
             if (vm.primeiroClique) vm.primeiroClique = false;
+            
+            for (var i = 0; i < vm.terrenos.length; i++)
+                for (var j = 0; j < vm.terrenos[0].length; j++) {
+                    var terreno = vm.terrenos[i][j];
+                    if (terreno.estado === 'F' && terreno.value != 9)
+                        return;
+                }
+            
+            vm.gameover = true;
+            alert('Parabéns, você ganhou!');
+            
         };
     },
     formatar: function (terreno, fator) {
